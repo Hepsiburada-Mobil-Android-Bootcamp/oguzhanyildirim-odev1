@@ -1,9 +1,9 @@
-package com.android.figmahomework
+package com.android.figmahomework.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.android.figmahomework.FadingImageView.FadeSide
+import com.android.figmahomework.custom.FadingImageView.FadeSide
 import android.view.View
 import com.android.figmahomework.databinding.ActivityLoginBinding
 

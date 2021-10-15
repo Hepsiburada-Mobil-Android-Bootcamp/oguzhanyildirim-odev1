@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMovieName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray_button"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp">
+        <TextView
+            android:id="@+id/tvMovieListName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/movie_name"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:padding="8dp"
+
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

@@ -1,18 +1,18 @@
-package com.android.figmahomework
+package com.android.figmahomework.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.android.figmahomework.databinding.ActivityHomeBinding
-import android.util.DisplayMetrics
 import com.ToxicBakery.viewpager.transforms.RotateDownTransformer
 
-import androidx.recyclerview.widget.RecyclerView
-
 import androidx.recyclerview.widget.LinearLayoutManager
-
-
-
+import com.android.figmahomework.data.model.HomeItemModel
+import com.android.figmahomework.adapter.HorizontalMenuAdapter
+import com.android.figmahomework.adapter.MovieViewPagerAdapter
+import com.android.figmahomework.R
+import com.android.figmahomework.data.model.MenuItemModel
 
 
 class HomeActivity : AppCompatActivity() {
@@ -36,7 +36,10 @@ class HomeActivity : AppCompatActivity() {
 
         binding?.let { b ->
             b.vpViewPager.apply {
-                adapter = MovieViewPagerAdapter(applicationContext, homeItems)
+                adapter = MovieViewPagerAdapter(applicationContext, homeItems) {
+                    val intent = Intent(applicationContext, MovieListActivity::class.java)
+                    startActivity(intent)
+                }
                 setPageTransformer(true, RotateDownTransformer())
 
                 addOnPageChangeListener(object : ViewPager.OnPageChangeListener {

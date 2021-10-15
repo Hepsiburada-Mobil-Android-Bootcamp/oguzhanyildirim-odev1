@@ -1,4 +1,4 @@
-package com.android.figmahomework
+package com.android.figmahomework.data.model
 
 data class HomeItemModel(
     val movieName : String,

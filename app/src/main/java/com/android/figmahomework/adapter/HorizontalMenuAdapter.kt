@@ -1,8 +1,9 @@
-package com.android.figmahomework
+package com.android.figmahomework.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.android.figmahomework.data.model.MenuItemModel
 import com.android.figmahomework.databinding.ItemHorizontalMenuBinding
 
 class HorizontalMenuAdapter(private val menuList : ArrayList<MenuItemModel>) : RecyclerView.Adapter<HorizontalMenuAdapter.HorizontalMenuViewHolder>() {

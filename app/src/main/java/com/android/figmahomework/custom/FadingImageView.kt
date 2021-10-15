@@ -1,10 +1,9 @@
-package com.android.figmahomework
+package com.android.figmahomework.custom
 
 import android.content.Context
 import android.content.res.Resources
 import android.util.AttributeSet
 import android.util.TypedValue
-import android.widget.ImageView
 
 
 open class FadingImageView : androidx.appcompat.widget.AppCompatImageView {

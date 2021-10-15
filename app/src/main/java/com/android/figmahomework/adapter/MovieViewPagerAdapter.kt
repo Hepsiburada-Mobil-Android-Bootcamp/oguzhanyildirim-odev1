@@ -1,7 +1,6 @@
-package com.android.figmahomework
+package com.android.figmahomework.adapter
 
 import android.content.Context
-import androidx.annotation.NonNull
 
 import android.view.ViewGroup
 import android.view.LayoutInflater
@@ -10,9 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.viewpager.widget.PagerAdapter
+import com.android.figmahomework.data.model.HomeItemModel
+import com.android.figmahomework.R
 
 
-class MovieViewPagerAdapter(private val context: Context, private val items: ArrayList<HomeItemModel>) : PagerAdapter() {
+class MovieViewPagerAdapter(private val context: Context, private val items: ArrayList<HomeItemModel>, private val movieClickListener : () -> Unit) : PagerAdapter() {
     override fun instantiateItem(collection: ViewGroup, position: Int): Any {
         val inflater = LayoutInflater.from(context)
         val layout = inflater.inflate(R.layout.item_movie_viewpager, collection, false) as ViewGroup
@@ -22,6 +23,9 @@ class MovieViewPagerAdapter(private val context: Context, private val items: Arr
         layout.findViewById<TextView>(R.id.tvMoiveName).text = currentMoive.movieName
         layout.findViewById<TextView>(R.id.tvMovieRate).text = currentMoive.movieImdb
 
+        layout.findViewById<ImageView>(R.id.ivMovieImage).setOnClickListener {
+            movieClickListener.invoke()
+        }
         collection.addView(layout)
         return layout
     }
