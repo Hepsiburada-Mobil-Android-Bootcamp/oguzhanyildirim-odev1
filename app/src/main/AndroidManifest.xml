@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FigmaHomework">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MovieListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
