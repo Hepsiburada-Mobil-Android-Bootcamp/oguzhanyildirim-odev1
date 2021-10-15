@@ -4,4 +4,7 @@
     <string name="login_text">By creating an account you get access to an unlimited number of exercises</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+    <string name="movieimg">movieImg</string>
+    <string name="movie_name">Movie Name</string>
+    <string name="_5_0">5.0</string>
 </resources>

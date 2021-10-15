@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:elevation="20dp"
+        app:cardCornerRadius="50dp">
+
+        <ImageView
+            android:id="@+id/ivMovieImage"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/login_background"
+            android:contentDescription="@string/movieimg" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvMoiveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/movie_name"/>
+
+    <TextView
+        android:id="@+id/tvMovieRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/_5_0"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_star" />
+
+</LinearLayout>
